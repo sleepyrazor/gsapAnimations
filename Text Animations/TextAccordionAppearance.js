@@ -21,7 +21,7 @@ tl.from(splitText.chars,{
     stagger:0.03,
     transformOrigin:"center top",
     perspective:700,
-}).to(splitText.chars,{ //You'll see a shadow running across it.
+}).to(splitText.chars,{ //You'll see a fade running across it.
     color:"#855f45ff",
     stagger:0.03,
     duration:0.9,
