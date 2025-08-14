@@ -1,0 +1,40 @@
+/*Declare in your html file the following lines:*/
+/*<div class="cursor-punto" data-punto></div>*/
+/*<div class="cursor-linia" data-linia></div>*/
+.cursor-punto {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+    will-change: transform; 
+}
+.cursor-punto.on-button {
+    background-color: white;
+    mix-blend-mode: difference;
+}
+.cursor-linia {
+    width: 40px;
+    height: 40px;
+    border: 2px solid gray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transition: transform 0.3s ease, border 0.3s ease;
+    will-change: transform; 
+}
+.cursor-linia.expand{
+    transform: translate(-50%, -50%) scale(1.8); 
+    border: 2px solid hsl(267, 61%, 49%); 
+    transition: transform 0.1s ease, border 0.1s ease; 
+}
