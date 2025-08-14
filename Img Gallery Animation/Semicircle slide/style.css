@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-smoothing:grayscale;
+}
+/*Estilos genericos*/
+html, body {
+    width: 100vw;
+    height: auto;/*900vh*/
+    cursor:none;
+    background: #ecdfcd;
+    color: white;
+    overflow-x: hidden;
+    
+}
+img{
+    position: relative;
+    width: 100%;
+    height: 100%; /*auto*/
+    object-fit: cover;
+    will-change: transform;
+}
+h1{
+    font-size:5rem;
+    font-weight: 500;
+    letter-spacing: -0.1rem;
+    line-height: 1.25;
+}
+p{
+    font-size: 1.124rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: black;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: auto  ; /*100vh*/
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+.proyectos{
+    background-color: #855f45ff;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.cartas {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  width: 150%;
+  max-width: 1800px;
+  height: 600px;
+  transform: translate(-50%,-50%);
+  will-change: transform;
+}
+.carta {
+  position: absolute;
+  width: 500px;
+  height: 550px;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  margin-left: -250px;
+  display: flex;
+  flex-direction:column;
+  gap:1em;
+  will-change: transform;
+}
+.carta-img{
+    flex: 1;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+.carta-contenido{
+    width: 100%;
+    height: 60px;
+}
+.carta-contenido p{
+    text-align: left;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.25;
+}
+.contador-proyecto{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 2em;
+}
+.titulo-contenido, .contador{
+    position: relative;
+    width: 1200px;
+    height: 150px;
+    clip-path: polygon(0 0,100% 0, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+.contador{
+    top:-10px
+}
+.contenedor-contador{
+    position: relative;
+    transform:translateY(150px);
+    will-change: transform;
+}
+.contador-proyecto h1{
+    width: 100%;
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    font-family:'PP MONUMENT EXTENDED';
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    will-change: transform;
+}
+.empty{
+    opacity: 0;
+}
+@media(max-width:900px){
+    .titulo-contenido{
+        height: 30px;
+    }
+    .titulo-contenido h1{
+        font-size: 30px;
+    }
+    .contador{
+        top:0px;
+        left:-10px
+    }
+    .cartas{
+        top:27.5%
+    }
+    .carta{
+        width: 375px;
+        height: 500px;
+    }
+}
