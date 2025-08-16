@@ -9,7 +9,7 @@ const init = () => {
   marca.appendChild(clon);
 
 // Calculate the width of the element and the gap
-  const width = contenido.offsetWidth; 
+  const width = parseInt(getComputedStyle(contenido).getPropertyValue("width"), 10); 
   const gap = parseInt(getComputedStyle(marca).gap, 10) || 0; // Si gap no está definido, usa 0
 // Distance is width + space (negative to move left)
   const distancia = -(width + gap);
