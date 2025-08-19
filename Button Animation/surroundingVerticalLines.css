@@ -1,0 +1,51 @@
+.Button1 {
+    color: white;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    z-index: 10;
+    cursor: none;
+    position: relative;
+    white-space: nowrap; 
+    letter-spacing: 0;
+    transition: letter-spacing 280ms ease-in-out;
+    padding: 0.5rem;
+}
+/* Button effects */
+.Button1:hover,
+.Button1:active {
+    letter-spacing: 3px; 
+}
+.Button1:after,
+.Button1:before {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border: 1px solid #b0c7e0;
+    bottom: 0px;
+    content: " ";
+    display: block;
+    margin: 0 auto;
+    position: absolute; /* Cambiado de relative a absolute */
+    -webkit-transition: all 280ms ease-in-out;
+            transition: all 280ms ease-in-out;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Button1:hover:after,
+.Button1:hover:before {
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-color: #b0c7e0;
+    -webkit-transition: width 350ms ease-in-out;
+            transition: width 350ms ease-in-out;
+    width: 100%;
+}
+.Button1:hover:before {
+    bottom: auto;
+    top: 0;
+    width: 100%;
+}
